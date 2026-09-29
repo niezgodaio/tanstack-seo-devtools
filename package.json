@@ -1,0 +1,61 @@
+{
+  "name": "@niezgodaio/tanstack-seo-devtools",
+  "version": "0.1.0",
+  "description": "TanStack Devtools plugin for inspecting SEO metadata, Open Graph, Twitter cards, and JSON-LD structured data.",
+  "license": "MIT",
+  "author": "niezgoda",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niezgodaio/tanstack-seo-devtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niezgodaio/tanstack-seo-devtools/issues"
+  },
+  "homepage": "https://github.com/niezgodaio/tanstack-seo-devtools#readme",
+  "keywords": [
+    "tanstack",
+    "devtools",
+    "seo",
+    "json-ld",
+    "open-graph",
+    "react"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "tanstack-marketplace-plugin-metadata.ts"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "biome check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "pnpm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "happy-dom": "^18.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
